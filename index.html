@@ -1,0 +1,321 @@
+
+<html>
+ <head>
+    <title>ATLANTA</title>
+    <script src="lib/threeGeoJSON.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="lib/three.min.js"></script>
+    <script src="lib/extruder.js"></script>
+    <script src="lib/heightmap.js"></script>
+    <script src="lib/drawTiles.js"></script>
+    <script src="lib/drawHoods.js"></script>
+    <script src="lib/util.js"></script>
+    <script src="lib/MapTrackballControls.js"></script>
+
+    <script src="fonts/helvetiker_regular.typeface.js"></script>
+    <script src="lib/jquery-1.10.2.min.js"></script>
+      
+    <script src="lib/Tween.js"></script>
+    <script src="lib/button.js"></script>
+
+    <script src="shaders/SSAOShader.js"></script>
+    <script src="shaders/CopyShader.js"></script>
+    <script src="shaders/RenderPass.js"></script>
+    <script src="shaders/ShaderPass.js"></script>
+    <script src="shaders/MaskPass.js"></script>
+    <script src="shaders/EffectComposer.js"></script>
+
+
+    <!-- // <script src="//d3js.org/d3.v3.min.js"></script> -->
+    <!-- // <script src="//d3js.org/topojson.v1.min.js"></script> -->
+    <!-- // <script src="http://d3js.org/queue.v1.min.js"></script> -->
+
+    <!-- // <script src="lib/d3_renderer.js"></script> -->
+
+        
+    </head>
+<script type="x-frag" id="vertexShader">
+
+  varying vec4 v_col;
+  uniform float time;
+  uniform float extrude;
+  uniform sampler2D tex0;
+  uniform sampler2D tex1;
+  uniform sampler2D tex2;
+  uniform sampler2D tex3;
+  uniform sampler2D tex4;
+  uniform sampler2D tex5;
+  uniform sampler2D tex6;
+  uniform sampler2D tex7;
+  uniform sampler2D tex8;
+  uniform sampler2D tex9;
+  uniform sampler2D tex10;
+
+  vec3 palette( in float t)
+  {
+
+    vec3 a = vec3(0.2,0.1,0.4);
+    vec3 b = vec3(1.0,1.0,0.3);
+    vec3 c = vec3(0.6,0.5,0.5);
+    vec3 d = vec3(0.6,0.5,0.1);
+    return a + b*cos( 6.28318*(c*t+d) );
+  }
+
+
+  // float decode(sampler2D t) {
+  //   vec4 tex = texture2D(t, uv);
+  //   return tex.r * 100. + tex.b * 10. + tex.b;
+  // }
+
+  float decode(sampler2D t) {
+
+    float c = texture2D(t, uv).r;
+    return c * 100.;
+  }
+
+  void main()
+  {
+    vec3 pos = position;
+
+    float t = time;
+    float alpha = mod(time, 1.);
+    float mix = 0.;
+
+    if (t >= 0. && t < 1.) {
+      mix = (1. - alpha) * decode(tex0) + alpha * decode(tex1);
+
+    } else if (t >= 1. && t < 2.) {
+      mix = (1. - alpha) * decode(tex1) + alpha * decode(tex2);
+
+    } else if (t >= 2. && t < 3.) {
+      mix = (1. - alpha) * decode(tex2) + alpha * decode(tex3);
+
+    } else if (t >= 3. && t < 4.) {
+      mix = (1. - alpha) * decode(tex3) + alpha * decode(tex4);
+
+    }else if (t >= 4. && t < 5.) {
+      mix = (1. - alpha) * decode(tex4) + alpha * decode(tex5);
+
+    }else if (t >= 5. && t < 6.) {
+      mix = (1. - alpha) * decode(tex5) + alpha * decode(tex6);
+
+    }else if (t >= 6. && t < 7.) {
+      mix = (1. - alpha) * decode(tex6) + alpha * decode(tex7);
+
+    }else if (t >= 7. && t < 8.) {
+      mix = (1. - alpha) * decode(tex7) + alpha * decode(tex8);
+
+    }else if (t >= 8. && t < 9.) {
+      mix = (1. - alpha) * decode(tex8) + alpha * decode(tex9);
+
+    }else if (t >= 9. && t < 10.) {
+      mix = (1. - alpha) * decode(tex9) + alpha * decode(tex10);
+
+    }else if (t == 10.) {
+      mix =  decode(tex10);
+    }
+
+    float linear_val = mix/25.;
+    // float log_val = log(mix/50. - 1);
+    pos.z += pow(linear_val, 0.5) * extrude;
+
+    v_col.rgb = palette(pow(linear_val, 0.5)) ;
+    v_col.a = 1.0;
+    // if (mix <0.01) 
+      // v_col = vec4(0.);
+
+    vec4 mvPosition = modelViewMatrix * vec4(pos, 1.0 );
+
+    gl_Position = projectionMatrix * mvPosition;
+
+  }
+
+</script>
+
+<script type="x-frag" id="fragmentShader">
+    varying vec4 v_col;
+
+    void main() {
+
+      vec4 col = v_col;
+
+
+      gl_FragColor = vec4(col.rgb, 1.0);
+    }
+
+</script>
+
+
+    <body>
+      <div id = "loader"> loading </div>
+      <button id="play"> Play </button>
+      <button onclick="timeTo(0)"> 1940 </button>
+      <button onclick="timeTo(1)"> 1950 </button>
+      <button onclick="timeTo(2)"> 1960 </button>
+      <button onclick="timeTo(3)"> 1970 </button>
+      <button onclick="timeTo(4)"> 1980 </button>
+      <button onclick="timeTo(5)"> 1990 </button>
+      <button onclick="timeTo(6)"> 2000 </button>
+      <button onclick="timeTo(7)"> 2010 </button>
+      <button onclick="timeTo(8)"> 2020 </button>
+      <button onclick="timeTo(9)"> 2030 </button>
+      <button onclick="timeTo(10)"> 2040 </button>
+
+      <button id="cam0"> CameraTop </button>
+      <button id="cam1"> CameraSide </button>
+      <button id="cam2"> CameraZoom </button>
+      <button id="wire"> Wireframe </button>
+      <button id="labels"> Labels </button>
+      <!-- <div id = "d3_render"> </div> -->
+      <script type="text/JavaScript">
+
+
+    function gup( name, url ) {
+      if (!url) url = location.href
+      name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+      var regexS = "[\\?&]"+name+"=([^&#]*)";
+      var regex = new RegExp( regexS );
+      var results = regex.exec( url );
+      return results == null ? null : results[1];
+    }
+
+
+    function initPostprocessing() {
+
+        // Setup render pass
+        var renderPass = new THREE.RenderPass( scene, camera );
+
+        // Setup depth pass
+        var depthShader = THREE.ShaderLib[ "depthRGBA" ];
+        var depthUniforms = THREE.UniformsUtils.clone( depthShader.uniforms );
+
+        depthMaterial = new THREE.ShaderMaterial( { 
+          fragmentShader: depthShader.fragmentShader, 
+          fragmentShader: depthShader.fragmentShader, 
+          vertexShader: document.getElementById( 'vertexShader' ).textContent,
+          uniforms: depthUniforms,
+           blending: THREE.NoBlending } );
+
+        var pars = { minFilter: THREE.LinearFilter, magFilter: THREE.LinearFilter };
+        depthRenderTarget = new THREE.WebGLRenderTarget( window.innerWidth/4., window.innerHeight/4., pars );
+
+        // Setup SSAO pass
+        ssaoPass = new THREE.ShaderPass( THREE.SSAOShader );
+        ssaoPass.renderToScreen = true;
+        //ssaoPass.uniforms[ "tDiffuse" ].value will be set by ShaderPass
+        ssaoPass.uniforms[ "tDepth" ].value = depthRenderTarget;
+        ssaoPass.uniforms[ 'size' ].value.set( window.innerWidth/4, window.innerHeight/4 );
+        ssaoPass.uniforms[ 'cameraNear' ].value = camera.near;
+        ssaoPass.uniforms[ 'cameraFar' ].value = camera.far;
+        ssaoPass.uniforms[ 'onlyAO' ].value = (true );
+        ssaoPass.uniforms[ 'aoClamp' ].value = 0.3;
+        ssaoPass.uniforms[ 'lumInfluence' ].value = 0.5;
+
+        // Add pass to effect composer
+        effectComposer = new THREE.EffectComposer( renderer );
+        effectComposer.addPass( renderPass );
+        effectComposer.addPass( ssaoPass );
+      }
+
+      layers = {};
+
+      function init() {
+        //New scene and camera
+        scene = new THREE.Scene();
+        camera = new THREE.PerspectiveCamera(
+          55, window.innerWidth / window.innerHeight, 0.001, 1000 );
+        
+        //New Renderer
+        renderer = new THREE.WebGLRenderer();
+        renderer.setSize( window.innerWidth, window.innerHeight );
+        document.body.appendChild( renderer.domElement );
+
+        //Enable controls           
+        camera.position.set(-84.042, 33.841, 1)
+
+        controls = new THREE.TrackballControls(camera);
+        controls.target.set(-84.3900, 33.7550, 0);
+        // initPostprocessing();
+
+          scene.fog = new THREE.Fog(0x000000, 0.01, 1.5);
+
+      }
+      var light
+      var road_opacity = 0.0;
+
+      function lights(scene) {
+        light = new THREE.PointLight();
+        scene.add(light);
+      }
+          init();
+          lights(scene);
+          animate = true;
+
+          //   // Draw the GeoJSON for counties
+          // $.getJSON("data/2010_census_tracts.geojson", function (data) { 
+          //     drawThreeGeo(data, 10, 'plane', {color:"cyan"}, layers)
+          // });
+
+
+          addTilesAsync(scene, layers);
+          addHoodsAsync(scene);
+
+          scene.add( genHeightmap(gup("res") || "") );
+          $("#loader").hide();
+
+          // window.setTimeout(function() {
+          //   if ( layers.tracts && 
+          //     layers.tracts.children && 
+          //     layers.tracts.children.length == 949) { // if everything loaded
+
+          //     // scene.add(layers["tracts"])
+  
+              
+          //     // LoadData(
+          //     //   "data/Data/ARC_Population_Forecasts.csv", layers,
+          //     //   "housing", 11, extrude);
+          //     // LoadData(
+          //     //   "data/Data/ARC_Population_Forecasts.csv", layers,
+          //     //   "population", 11, plot); 
+
+
+          //     // }
+
+          //   } else {
+          //      window.setTimeout(arguments.callee, interval);  
+          //    }
+          // }, interval);
+
+          // for ( tract in layers.tracts.children) {
+            // console.log(tract)
+          // }
+
+          render();
+
+            function render(t) {
+              if ( shadermat && doAnimate) {
+                shadermat.uniforms.time.value += 0.01;
+
+                if ( shadermat.uniforms.time.value > 10.1)
+                  shadermat.uniforms.time.value = 0;
+                // console.log(shadermat.uniforms.time.value)
+              }
+
+              controls.update();
+              TWEEN.update();
+
+          // scene.overrideMaterial = depthMaterial;
+          renderer.render( scene, camera) ; //, depthRenderTarget, true );
+
+          // Render renderPass and SSAO shaderPass
+          // scene.overrideMaterial = null;
+          // effectComposer.render();
+              requestAnimationFrame(render);
+            }
+            
+            render();
+            
+      </script>
+   </body>
+</html>

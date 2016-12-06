@@ -1,0 +1,362 @@
+
+<!-- saved from url=(0049)http://localhost:8888/nshelton.github.io/atlanta/ -->
+<html><script>(function main() {
+    // Create enabled event
+    function fireEnabledEvent() {
+        // If gli exists, then we are already present and shouldn't do anything
+        if (!window.gli) {
+            setTimeout(function () {
+                var enabledEvent = document.createEvent("Event");
+                enabledEvent.initEvent("WebGLEnabledEvent", true, true);
+                document.dispatchEvent(enabledEvent);
+            }, 0);
+        } else {
+            //console.log("WebGL Inspector already embedded on the page - disabling extension");
+        }
+    };
+
+    // Grab the path root from the extension
+    document.addEventListener("WebGLInspectorReadyEvent", function (e) {
+        var pathElement = document.getElementById("__webglpathroot");
+        if (window["gliloader"]) {
+            gliloader.pathRoot = pathElement.innerText;
+        } else {
+            // TODO: more?
+            window.gliCssUrl = pathElement.innerText + "gli.all.css";
+        }
+    }, false);
+
+    // Rewrite getContext to snoop for webgl
+    var originalGetContext = HTMLCanvasElement.prototype.getContext;
+    if (!HTMLCanvasElement.prototype.getContextRaw) {
+        HTMLCanvasElement.prototype.getContextRaw = originalGetContext;
+    }
+    HTMLCanvasElement.prototype.getContext = function () {
+        var ignoreCanvas = this.internalInspectorSurface;
+        if (ignoreCanvas) {
+            return originalGetContext.apply(this, arguments);
+        }
+
+        var result = originalGetContext.apply(this, arguments);
+        if (result == null) {
+            return null;
+        }
+
+        var contextNames = ["moz-webgl", "webkit-3d", "experimental-webgl", "webgl", "3d"];
+        var requestingWebGL = contextNames.indexOf(arguments[0]) != -1;
+        if (requestingWebGL) {
+            // Page is requesting a WebGL context!
+            fireEnabledEvent(this);
+
+            // If we are injected, inspect this context
+            if (window.gli) {
+                if (gli.host.inspectContext) {
+                    // TODO: pull options from extension
+                    result = gli.host.inspectContext(this, result);
+                    // NOTE: execute in a timeout so that if the dom is not yet
+                    // loaded this won't error out.
+                    window.setTimeout(function() {
+                        var hostUI = new gli.host.HostUI(result);
+                        result.hostUI = hostUI; // just so we can access it later for debugging
+                    }, 0);
+                }
+            }
+        }
+
+        return result;
+    };
+})();</script><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <title>ATLANTA</title>
+    <script src="./ATLANTA_files/threeGeoJSON.js"></script><style type="text/css"></style>
+    <link rel="stylesheet" href="./ATLANTA_files/style.css">
+
+    <script src="./ATLANTA_files/three.min.js"></script>
+    <script src="./ATLANTA_files/extruder.js"></script>
+    <script src="./ATLANTA_files/heightmap.js"></script>
+    <script src="./ATLANTA_files/drawTiles.js"></script>
+    <script src="./ATLANTA_files/util.js"></script>
+    <script src="./ATLANTA_files/TrackballControls.js"></script>
+
+    <script src="./ATLANTA_files/helvetiker_regular.typeface.js"></script>
+    <script src="./ATLANTA_files/jquery-1.10.2.min.js"></script>
+      
+    <script src="./ATLANTA_files/Tween.js"></script>
+    <script src="./ATLANTA_files/button.js"></script>
+
+    <script src="./ATLANTA_files/SSAOShader.js"></script>
+    <script src="./ATLANTA_files/CopyShader.js"></script>
+    <script src="./ATLANTA_files/RenderPass.js"></script>
+    <script src="./ATLANTA_files/ShaderPass.js"></script>
+    <script src="./ATLANTA_files/MaskPass.js"></script>
+    <script src="./ATLANTA_files/EffectComposer.js"></script>
+
+    <!-- // <script src="//d3js.org/d3.v3.min.js"></script> -->
+    <!-- // <script src="//d3js.org/topojson.v1.min.js"></script> -->
+    <!-- // <script src="http://d3js.org/queue.v1.min.js"></script> -->
+
+    <!-- // <script src="lib/d3_renderer.js"></script> -->
+
+        
+    <script type="x-frag" id="vertexShader">
+
+  varying vec4 v_col;
+  uniform float time;
+  uniform float extrude;
+  uniform sampler2D tex0;
+  uniform sampler2D tex1;
+  uniform sampler2D tex2;
+  uniform sampler2D tex3;
+  uniform sampler2D tex4;
+  uniform sampler2D tex5;
+
+  vec3 palette( in float t)
+  {
+
+    vec3 a = vec3(0.2,0.1,0.4);
+    vec3 b = vec3(1.0,1.0,0.3);
+    vec3 c = vec3(0.6,0.5,0.5);
+    vec3 d = vec3(0.6,0.5,0.1);
+    return a + b*cos( 6.28318*(c*t+d) );
+  }
+
+
+  // float decode(sampler2D t) {
+  //   vec4 tex = texture2D(t, uv);
+  //   return tex.r * 100. + tex.b * 10. + tex.b;
+  // }
+
+  float decode(sampler2D t) {
+    vec4 tex = texture2D(t, uv);
+    return tex.r * 100.;
+  }
+
+  void main()
+  {
+    vec3 pos = position;
+
+    float p0 = decode(tex0); 
+    float p1 = decode(tex1); 
+    float p2 = decode(tex2); 
+    float p3 = decode(tex3); 
+    float p4 = decode(tex4); 
+    float p5 = decode(tex5); 
+
+
+    float t = mod(time, 5.);
+    float alpha = mod(time, 1.);
+    float mix = 0.;
+
+    if (t >= 0. && t < 1.) {
+      mix = (1. - alpha) * p0 + alpha * p1;
+
+    } else if (t >= 1. && t < 2.) {
+      mix = (1. - alpha) * p1 + alpha * p2;
+
+    } else if (t >= 2. && t < 3.) {
+      mix = (1. - alpha) * p2 + alpha * p3;
+
+    } else if (t >= 3. && t < 4.) {
+      mix = (1. - alpha) * p3 + alpha * p4;
+
+    }else if (t >= 4. && t < 5.) {
+      mix = (1. - alpha) * p4 + alpha * p5;
+
+    }
+
+    float linear_val = mix/50.;
+    // float log_val = log(mix/50. - 1);
+    pos.z += pow(linear_val, 0.5) * extrude;
+
+    v_col.rgb = palette(pow(linear_val, 0.5));
+    v_col.a = 1.0;
+    if (mix <0.01) 
+      v_col = vec4(0.);
+
+    vec4 mvPosition = modelViewMatrix * vec4(pos, 1.0 );
+
+    gl_Position = projectionMatrix * mvPosition;
+
+  }
+
+</script><script type="x-frag" id="fragmentShader">
+      varying vec4 v_col;
+
+    void main() {
+
+      vec4 col = v_col;
+
+
+
+      gl_FragColor = vec4(col.rgb, 1.0);
+    }
+
+</script><style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+</style></head>
+
+
+
+
+
+    <body>
+      <div id="loader" style="color: rgb(17, 0, 0); display: none;"> </div>
+      <button id="time0"> Population 2010 </button>
+      <button id="time1"> Population 2020 </button>
+      <button id="time2"> Population 2030 </button>
+      <button id="time3"> Population 2040 </button>
+      <button id="time4"> Population 2050 </button>
+      <button id="time5"> Population 2060 </button>
+      <button id="cam0"> CameraTop </button>
+      <button id="cam1"> CameraSide </button>
+      <button id="cam2"> CameraZoom </button>
+      <button id="wire"> Wireframe </button>
+      <!-- <div id = "d3_render"> </div> -->
+      <script type="text/JavaScript">
+
+
+
+    function initPostprocessing() {
+
+        // Setup render pass
+        var renderPass = new THREE.RenderPass( scene, camera );
+
+        // Setup depth pass
+        var depthShader = THREE.ShaderLib[ "depthRGBA" ];
+        var depthUniforms = THREE.UniformsUtils.clone( depthShader.uniforms );
+
+        depthMaterial = new THREE.ShaderMaterial( { 
+          fragmentShader: depthShader.fragmentShader, 
+          vertexShader: document.getElementById( 'vertexShader' ).textContent,
+          uniforms: depthUniforms,
+           blending: THREE.NoBlending } );
+
+        var pars = { minFilter: THREE.LinearFilter, magFilter: THREE.LinearFilter };
+        depthRenderTarget = new THREE.WebGLRenderTarget( window.innerWidth/4., window.innerHeight/4., pars );
+
+        // Setup SSAO pass
+        ssaoPass = new THREE.ShaderPass( THREE.SSAOShader );
+        ssaoPass.renderToScreen = true;
+        //ssaoPass.uniforms[ "tDiffuse" ].value will be set by ShaderPass
+        ssaoPass.uniforms[ "tDepth" ].value = depthRenderTarget;
+        ssaoPass.uniforms[ 'size' ].value.set( window.innerWidth/4, window.innerHeight/4 );
+        ssaoPass.uniforms[ 'cameraNear' ].value = camera.near;
+        ssaoPass.uniforms[ 'cameraFar' ].value = camera.far;
+        ssaoPass.uniforms[ 'onlyAO' ].value = (true );
+        ssaoPass.uniforms[ 'aoClamp' ].value = 0.3;
+        ssaoPass.uniforms[ 'lumInfluence' ].value = 0.5;
+
+        // Add pass to effect composer
+        effectComposer = new THREE.EffectComposer( renderer );
+        effectComposer.addPass( renderPass );
+        effectComposer.addPass( ssaoPass );
+      }
+
+
+      function init() {
+        //New scene and camera
+        scene = new THREE.Scene();
+        camera = new THREE.PerspectiveCamera(
+          55, window.innerWidth / window.innerHeight, 0.001, 1000 );
+        
+        //New Renderer
+        renderer = new THREE.WebGLRenderer();
+        renderer.setSize( window.innerWidth, window.innerHeight );
+        document.body.appendChild( renderer.domElement );
+
+        //Enable controls
+        controls = new THREE.TrackballControls(camera);
+        controls.target.set(-84.3900, 33.7550, 0);
+        // camera.position.set(-84.042, 33.841, 2)
+        initPostprocessing();
+      }
+      var light
+      function lights(scene) {
+        light = new THREE.PointLight();
+        scene.add(light);
+      }
+          init();
+          lights(scene);
+          var layers = {}
+          animate = true;
+
+            // Draw the GeoJSON for counties
+          $.getJSON("data/2010_census_tracts.geojson", function (data) { 
+              drawThreeGeo(data, 10, 'plane', {color:"cyan"}, layers)
+          });
+
+
+          addTilesAsync(scene, layers);
+
+
+          var interval = 100; // ms
+              scene.add( genHeightmap() );
+
+          // window.setTimeout(function() {
+          //   if ( layers.tracts && 
+          //     layers.tracts.children && 
+          //     layers.tracts.children.length == 949) { // if everything loaded
+
+          //     // scene.add(layers["tracts"])
+          //     // var title = genText("ATLANTA", 0.1);
+          //     // title.position.set(-84.1900, 33.6550, 0)
+          //     // scene.add(title)
+
+              
+          //     // LoadData(
+          //     //   "data/Data/ARC_Population_Forecasts.csv", layers,
+          //     //   "housing", 11, extrude);
+          //     // LoadData(
+          //     //   "data/Data/ARC_Population_Forecasts.csv", layers,
+          //     //   "population", 11, plot); 
+
+
+          //     // }
+
+          //   } else {
+          //      window.setTimeout(arguments.callee, interval);  
+          //    }
+          // }, interval);
+
+          // for ( tract in layers.tracts.children) {
+            // console.log(tract)
+          // }
+
+          render();
+
+            function render(t) {
+              if ( shadermat && doAnimate) {
+                shadermat.uniforms.time.value += 0.1;
+                if ( shadermat.uniforms.time.value > 5)
+                  shadermat.uniforms.time.value = 0;
+                // console.log(shadermat.uniforms.time.value)
+              }
+
+              controls.update();
+              TWEEN.update();
+
+          // scene.overrideMaterial = depthMaterial;
+          renderer.render( scene, camera, depthRenderTarget, true );
+
+          // Render renderPass and SSAO shaderPass
+          scene.overrideMaterial = null;
+          effectComposer.render();
+              requestAnimationFrame(render);
+            }
+            
+            render();
+            
+      </script><canvas width="3830" height="2076" style="width: 1915px; height: 1038px;"></canvas>
+   
+
+</body></html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+body {
+background-color:white;
+  /*overflow:hidden;*/
+}
+.table_column {
+	display: inline-block;
+	margin-right :10px;
+}
+
+.selected {
+	background-color: #888;
+
+}
+
+#uploader {
+	width:50%;
+}
+
+</style>
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+
+<body>
+<script src="//d3js.org/d3.v3.min.js"></script>
+<script src="//d3js.org/topojson.v1.min.js"></script>
+<script src="http://d3js.org/queue.v1.min.js"></script>
+<script src="lib/jquery-1.10.2.min.js"></script>
+
+<script src="lib/d3_renderer.js"></script>
+
+<script src="lib/saveSvgAsPng.js"></script>
+
+<a id="download" > </a>
+<button onclick="save()"> Save </button>
+<button id="gray" onclick="toggleColors()"> Grayscale </button>
+
+
+<input type="file" id="uploader">
+<div id="ui">
+</div>
+<table id="stats">
+
+</table>
+<canvas id="canvas"> </canvas>
+<div id="png-container"> </canvas>
+</body>
+

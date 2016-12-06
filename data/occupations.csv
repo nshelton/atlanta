@@ -1,0 +1,685 @@
+Year,Occupation Category,Occupation,Employment
+2014,Management,Chief Executives,"7,130"
+2014,Management,General and Operations Managers,"52,570"
+2014,Management,Legislators,880
+2014,Management,Advertising and Promotions Managers,**
+2014,Management,Marketing Managers,"4,460"
+2014,Management,Sales Managers,"8,860"
+2014,Management,Public Relations and Fundraising Managers,"1,150"
+2014,Management,Administrative Services Managers,"7,290"
+2014,Management,Computer and Information Systems Managers,"8,980"
+2014,Management,Financial Managers,"11,160"
+2014,Management,Industrial Production Managers,"1,930"
+2014,Management,Purchasing Managers,"1,310"
+2014,Management,"Transportation, Storage, and Distribution Managers","2,510"
+2014,Management,Compensation and Benefits Managers,360
+2014,Management,Human Resources Managers,"2,960"
+2014,Management,Training and Development Managers,830
+2014,Management,Construction Managers,"3,000"
+2014,Management,"Education Administrators, Preschool and Childcare Center/Program",920
+2014,Management,"Education Administrators, Elementary and Secondary School","4,050"
+2014,Management,"Education Administrators, Postsecondary","1,830"
+2014,Management,"Education Administrators, All Other",450
+2014,Management,Architectural and Engineering Managers,"3,100"
+2014,Management,Food Service Managers,"4,750"
+2014,Management,Funeral Service Managers,120
+2014,Management,Lodging Managers,520
+2014,Management,Medical and Health Services Managers,"3,450"
+2014,Management,Natural Sciences Managers,770
+2014,Management,Postmasters and Mail Superintendents,120
+2014,Management,"Property, Real Estate, and Community Association Managers","4,600"
+2014,Management,Social and Community Service Managers,"1,000"
+2014,Management,Emergency Management Directors,120
+2014,Management,"Managers, All Other","6,580"
+2014,Business and Finance,"Agents and Business Managers of Artists, Performers, and Athletes",260
+2014,Business and Finance,"Buyers and Purchasing Agents, Farm Products",440
+2014,Business and Finance,"Wholesale and Retail Buyers, Except Farm Products","1,520"
+2014,Business and Finance,"Purchasing Agents, Except Wholesale, Retail, and Farm Products","4,720"
+2014,Business and Finance,"Claims Adjusters, Examiners, and Investigators","6,490"
+2014,Business and Finance,"Insurance Appraisers, Auto Damage",290
+2014,Business and Finance,Compliance Officers,"4,230"
+2014,Business and Finance,Cost Estimators,"3,600"
+2014,Business and Finance,Human Resources Specialists,"10,430"
+2014,Business and Finance,Labor Relations Specialists,510
+2014,Business and Finance,Logisticians,"1,720"
+2014,Business and Finance,Management Analysts,"19,310"
+2014,Business and Finance,"Meeting, Convention, and Event Planners","1,620"
+2014,Business and Finance,Fundraisers,410
+2014,Business and Finance,"Compensation, Benefits, and Job Analysis Specialists","1,800"
+2014,Business and Finance,Training and Development Specialists,"6,410"
+2014,Business and Finance,Market Research Analysts and Marketing Specialists,"12,410"
+2014,Business and Finance,"Business Operations Specialists, All Other","22,910"
+2014,Business and Finance,Accountants and Auditors,"27,070"
+2014,Business and Finance,Appraisers and Assessors of Real Estate,"1,280"
+2014,Business and Finance,Budget Analysts,"1,160"
+2014,Business and Finance,Credit Analysts,"1,450"
+2014,Business and Finance,Financial Analysts,"5,790"
+2014,Business and Finance,Personal Financial Advisors,"4,690"
+2014,Business and Finance,Insurance Underwriters,"4,540"
+2014,Business and Finance,Financial Examiners,680
+2014,Business and Finance,Credit Counselors,100
+2014,Business and Finance,Loan Officers,"5,180"
+2014,Business and Finance,"Tax Examiners and Collectors, and Revenue Agents","1,620"
+2014,Business and Finance,Tax Preparers,"2,350"
+2014,Business and Finance,"Financial Specialists, All Other","2,620"
+2014,Computer and Mathematical,Computer and Information Research Scientists,340
+2014,Computer and Mathematical,Computer Systems Analysts,"14,320"
+2014,Computer and Mathematical,Information Security Analysts,"1,820"
+2014,Computer and Mathematical,Computer Programmers,"8,430"
+2014,Computer and Mathematical,"Software Developers, Applications","17,490"
+2014,Computer and Mathematical,"Software Developers, Systems Software","10,160"
+2014,Computer and Mathematical,Web Developers,"2,350"
+2014,Computer and Mathematical,Database Administrators,"4,360"
+2014,Computer and Mathematical,Network and Computer Systems Administrators,"7,840"
+2014,Computer and Mathematical,Computer Network Architects,"4,100"
+2014,Computer and Mathematical,Computer User Support Specialists,"15,580"
+2014,Computer and Mathematical,Computer Network Support Specialists,"5,340"
+2014,Computer and Mathematical,"Computer Occupations, All Other","3,350"
+2014,Computer and Mathematical,Actuaries,230
+2014,Computer and Mathematical,Operations Research Analysts,"1,660"
+2014,Computer and Mathematical,Statisticians,350
+2014,Computer and Mathematical,Mathematical Technicians,70
+2014,Architecture and Engineering,"Architects, Except Landscape and Naval","1,590"
+2014,Architecture and Engineering,Landscape Architects,690
+2014,Architecture and Engineering,Cartographers and Photogrammetrists,80
+2014,Architecture and Engineering,Surveyors,570
+2014,Architecture and Engineering,Aerospace Engineers,760
+2014,Architecture and Engineering,Biomedical Engineers,140
+2014,Architecture and Engineering,Chemical Engineers,280
+2014,Architecture and Engineering,Civil Engineers,"4,320"
+2014,Architecture and Engineering,Computer Hardware Engineers,"1,050"
+2014,Architecture and Engineering,Electrical Engineers,"2,690"
+2014,Architecture and Engineering,"Electronics Engineers, Except Computer","3,310"
+2014,Architecture and Engineering,Environmental Engineers,"1,270"
+2014,Architecture and Engineering,"Health and Safety Engineers, Except Mining Safety Engineers and Inspectors",690
+2014,Architecture and Engineering,Industrial Engineers,"3,400"
+2014,Architecture and Engineering,Materials Engineers,160
+2014,Architecture and Engineering,Mechanical Engineers,"2,700"
+2014,Architecture and Engineering,"Mining and Geological Engineers, Including Mining Safety Engineers",**
+2014,Architecture and Engineering,"Engineers, All Other","1,190"
+2014,Architecture and Engineering,Architectural and Civil Drafters,"1,610"
+2014,Architecture and Engineering,Electrical and Electronics Drafters,310
+2014,Architecture and Engineering,Mechanical Drafters,890
+2014,Architecture and Engineering,"Drafters, All Other",**
+2014,Architecture and Engineering,Civil Engineering Technicians,"1,280"
+2014,Architecture and Engineering,Electrical and Electronics Engineering Technicians,"2,700"
+2014,Architecture and Engineering,Electro-Mechanical Technicians,240
+2014,Architecture and Engineering,Environmental Engineering Technicians,310
+2014,Architecture and Engineering,Industrial Engineering Technicians,330
+2014,Architecture and Engineering,Mechanical Engineering Technicians,380
+2014,Architecture and Engineering,"Engineering Technicians, Except Drafters, All Other",640
+2014,Architecture and Engineering,Surveying and Mapping Technicians,840
+2014,"Life, Physical, and Social Science",Food Scientists and Technologists,**
+2014,"Life, Physical, and Social Science",Soil and Plant Scientists,50
+2014,"Life, Physical, and Social Science",Microbiologists,600
+2014,"Life, Physical, and Social Science",Zoologists and Wildlife Biologists,230
+2014,"Life, Physical, and Social Science","Biological Scientists, All Other",450
+2014,"Life, Physical, and Social Science",Conservation Scientists,170
+2014,"Life, Physical, and Social Science",Foresters,70
+2014,"Life, Physical, and Social Science",Epidemiologists,170
+2014,"Life, Physical, and Social Science","Medical Scientists, Except Epidemiologists",320
+2014,"Life, Physical, and Social Science",Physicists,**
+2014,"Life, Physical, and Social Science",Atmospheric and Space Scientists,**
+2014,"Life, Physical, and Social Science",Chemists,840
+2014,"Life, Physical, and Social Science","Environmental Scientists and Specialists, Including Health","1,110"
+2014,"Life, Physical, and Social Science","Geoscientists, Except Hydrologists and Geographers",260
+2014,"Life, Physical, and Social Science",Hydrologists,40
+2014,"Life, Physical, and Social Science","Physical Scientists, All Other",270
+2014,"Life, Physical, and Social Science",Economists,**
+2014,"Life, Physical, and Social Science",Survey Researchers,180
+2014,"Life, Physical, and Social Science","Clinical, Counseling, and School Psychologists","1,450"
+2014,"Life, Physical, and Social Science","Psychologists, All Other",150
+2014,"Life, Physical, and Social Science",Urban and Regional Planners,290
+2014,"Life, Physical, and Social Science",Anthropologists and Archeologists,**
+2014,"Life, Physical, and Social Science",Historians,50
+2014,"Life, Physical, and Social Science","Social Scientists and Related Workers, All Other",270
+2014,"Life, Physical, and Social Science",Agricultural and Food Science Technicians,300
+2014,"Life, Physical, and Social Science",Biological Technicians,230
+2014,"Life, Physical, and Social Science",Chemical Technicians,620
+2014,"Life, Physical, and Social Science",Social Science Research Assistants,230
+2014,"Life, Physical, and Social Science","Environmental Science and Protection Technicians, Including Health",440
+2014,"Life, Physical, and Social Science",Forensic Science Technicians,150
+2014,"Life, Physical, and Social Science",Forest and Conservation Technicians,**
+2014,"Life, Physical, and Social Science","Life, Physical, and Social Science Technicians, All Other",620
+2014,Community and Social Service,Substance Abuse and Behavioral Disorder Counselors,600
+2014,Community and Social Service,"Educational, Guidance, School, and Vocational Counselors","3,700"
+2014,Community and Social Service,Marriage and Family Therapists,60
+2014,Community and Social Service,Mental Health Counselors,900
+2014,Community and Social Service,Rehabilitation Counselors,460
+2014,Community and Social Service,"Counselors, All Other",50
+2014,Community and Social Service,"Child, Family, and School Social Workers","2,880"
+2014,Community and Social Service,Healthcare Social Workers,"1,900"
+2014,Community and Social Service,Mental Health and Substance Abuse Social Workers,930
+2014,Community and Social Service,"Social Workers, All Other",830
+2014,Community and Social Service,Health Educators,"2,330"
+2014,Community and Social Service,Probation Officers and Correctional Treatment Specialists,"1,380"
+2014,Community and Social Service,Social and Human Service Assistants,"4,020"
+2014,Community and Social Service,Community Health Workers,650
+2014,Community and Social Service,"Community and Social Service Specialists, All Other","1,550"
+2014,Community and Social Service,Clergy,250
+2014,Community and Social Service,"Directors, Religious Activities and Education",520
+2014,Community and Social Service,"Religious Workers, All Other",**
+2014,Legal,Lawyers,"12,110"
+2014,Legal,Judicial Law Clerks,150
+2014,Legal,"Administrative Law Judges, Adjudicators, and Hearing Officers",370
+2014,Legal,"Arbitrators, Mediators, and Conciliators",140
+2014,Legal,"Judges, Magistrate Judges, and Magistrates",780
+2014,Legal,Paralegals and Legal Assistants,"6,440"
+2014,Legal,Court Reporters,310
+2014,Legal,"Title Examiners, Abstractors, and Searchers",**
+2014,Legal,"Legal Support Workers, All Other",710
+2014,Education,"Business Teachers, Postsecondary",920
+2014,Education,"Computer Science Teachers, Postsecondary",400
+2014,Education,"Mathematical Science Teachers, Postsecondary",470
+2014,Education,"Architecture Teachers, Postsecondary",70
+2014,Education,"Engineering Teachers, Postsecondary",870
+2014,Education,"Biological Science Teachers, Postsecondary",390
+2014,Education,"Chemistry Teachers, Postsecondary",220
+2014,Education,"Environmental Science Teachers, Postsecondary",40
+2014,Education,"Physics Teachers, Postsecondary",100
+2014,Education,"Economics Teachers, Postsecondary",170
+2014,Education,"Political Science Teachers, Postsecondary",130
+2014,Education,"Psychology Teachers, Postsecondary",550
+2014,Education,"Sociology Teachers, Postsecondary",70
+2014,Education,"Social Sciences Teachers, Postsecondary, All Other",90
+2014,Education,"Nursing Instructors and Teachers, Postsecondary",370
+2014,Education,"Education Teachers, Postsecondary",750
+2014,Education,"Library Science Teachers, Postsecondary",50
+2014,Education,"Criminal Justice and Law Enforcement Teachers, Postsecondary",130
+2014,Education,"Law Teachers, Postsecondary",230
+2014,Education,"Social Work Teachers, Postsecondary",50
+2014,Education,"Art, Drama, and Music Teachers, Postsecondary",440
+2014,Education,"Communications Teachers, Postsecondary",150
+2014,Education,"English Language and Literature Teachers, Postsecondary",610
+2014,Education,"Foreign Language and Literature Teachers, Postsecondary",250
+2014,Education,"History Teachers, Postsecondary",190
+2014,Education,"Philosophy and Religion Teachers, Postsecondary",200
+2014,Education,"Home Economics Teachers, Postsecondary",**
+2014,Education,"Recreation and Fitness Studies Teachers, Postsecondary",70
+2014,Education,"Vocational Education Teachers, Postsecondary","1,860"
+2014,Education,"Postsecondary Teachers, All Other","2,400"
+2014,Education,"Preschool Teachers, Except Special Education","6,090"
+2014,Education,"Kindergarten Teachers, Except Special Education","3,050"
+2014,Education,"Elementary School Teachers, Except Special Education","27,580"
+2014,Education,"Middle School Teachers, Except Special and Career/Technical Education","14,130"
+2014,Education,"Career/Technical Education Teachers, Middle School",**
+2014,Education,"Secondary School Teachers, Except Special and Career/Technical Education","12,070"
+2014,Education,"Career/Technical Education Teachers, Secondary School",880
+2014,Education,"Special Education Teachers, Preschool",430
+2014,Education,"Special Education Teachers, Kindergarten and Elementary School","4,110"
+2014,Education,"Special Education Teachers, Middle School","1,990"
+2014,Education,"Special Education Teachers, Secondary School","1,700"
+2014,Education,"Special Education Teachers, All Other",110
+2014,Education,Adult Basic and Secondary Education and Literacy Teachers and Instructors,410
+2014,Education,Self-Enrichment Education Teachers,"4,840"
+2014,Education,"Teachers and Instructors, All Other, Except Substitute Teachers","5,740"
+2014,Education,Substitute Teachers,"10,680"
+2014,Education,Archivists,50
+2014,Education,Curators,80
+2014,Education,Museum Technicians and Conservators,100
+2014,Education,Librarians,"2,310"
+2014,Education,Library Technicians,"1,530"
+2014,Education,Audio-Visual and Multimedia Collections Specialists,90
+2014,Education,Farm and Home Management Advisors,30
+2014,Education,Instructional Coordinators,"2,560"
+2014,Education,Teacher Assistants,"16,610"
+2014,Education,"Education, Training, and Library Workers, All Other",**
+2014,Arts and Entertainment,Art Directors,520
+2014,Arts and Entertainment,Craft Artists,**
+2014,Arts and Entertainment,"Fine Artists, Including Painters, Sculptors, and Illustrators",230
+2014,Arts and Entertainment,Multimedia Artists and Animators,"1,320"
+2014,Arts and Entertainment,"Artists and Related Workers, All Other",290
+2014,Arts and Entertainment,Commercial and Industrial Designers,540
+2014,Arts and Entertainment,Floral Designers,550
+2014,Arts and Entertainment,Graphic Designers,"4,930"
+2014,Arts and Entertainment,Interior Designers,"1,250"
+2014,Arts and Entertainment,Merchandise Displayers and Window Trimmers,"3,180"
+2014,Arts and Entertainment,Set and Exhibit Designers,**
+2014,Arts and Entertainment,"Designers, All Other",**
+2014,Arts and Entertainment,Actors,590
+2014,Arts and Entertainment,Producers and Directors,"3,360"
+2014,Arts and Entertainment,Athletes and Sports Competitors,**
+2014,Arts and Entertainment,Coaches and Scouts,"1,870"
+2014,Arts and Entertainment,"Umpires, Referees, and Other Sports Officials",50
+2014,Arts and Entertainment,Choreographers,**
+2014,Arts and Entertainment,Music Directors and Composers,290
+2014,Arts and Entertainment,Musicians and Singers,280
+2014,Arts and Entertainment,"Entertainers and Performers, Sports and Related Workers, All Other",110
+2014,Arts and Entertainment,Radio and Television Announcers,270
+2014,Arts and Entertainment,Reporters and Correspondents,850
+2014,Arts and Entertainment,Public Relations Specialists,"3,380"
+2014,Arts and Entertainment,Editors,"1,400"
+2014,Arts and Entertainment,Technical Writers,740
+2014,Arts and Entertainment,Writers and Authors,510
+2014,Arts and Entertainment,Interpreters and Translators,800
+2014,Arts and Entertainment,"Media and Communication Workers, All Other",190
+2014,Arts and Entertainment,Audio and Video Equipment Technicians,"1,430"
+2014,Arts and Entertainment,Broadcast Technicians,**
+2014,Arts and Entertainment,Sound Engineering Technicians,380
+2014,Arts and Entertainment,Photographers,"1,050"
+2014,Arts and Entertainment,"Camera Operators, Television, Video, and Motion Picture",280
+2014,Arts and Entertainment,Film and Video Editors,330
+2014,Arts and Entertainment,"Media and Communication Equipment Workers, All Other",100
+2014,Healthcare,Chiropractors,610
+2014,Healthcare,"Dentists, General","1,540"
+2014,Healthcare,Orthodontists,**
+2014,Healthcare,"Dentists, All Other Specialists",**
+2014,Healthcare,Dietitians and Nutritionists,830
+2014,Healthcare,Optometrists,380
+2014,Healthcare,Pharmacists,"5,180"
+2014,Healthcare,Anesthesiologists,130
+2014,Healthcare,Family and General Practitioners,750
+2014,Healthcare,"Internists, General",**
+2014,Healthcare,Obstetricians and Gynecologists,280
+2014,Healthcare,"Pediatricians, General",610
+2014,Healthcare,Psychiatrists,280
+2014,Healthcare,Surgeons,650
+2014,Healthcare,"Physicians and Surgeons, All Other","7,360"
+2014,Healthcare,Physician Assistants,"1,510"
+2014,Healthcare,Podiatrists,140
+2014,Healthcare,Occupational Therapists,"1,780"
+2014,Healthcare,Physical Therapists,"2,820"
+2014,Healthcare,Radiation Therapists,330
+2014,Healthcare,Recreational Therapists,170
+2014,Healthcare,Respiratory Therapists,"2,050"
+2014,Healthcare,Speech-Language Pathologists,"1,540"
+2014,Healthcare,Exercise Physiologists,100
+2014,Healthcare,"Therapists, All Other",300
+2014,Healthcare,Veterinarians,"1,160"
+2014,Healthcare,Registered Nurses,"36,370"
+2014,Healthcare,Nurse Anesthetists,430
+2014,Healthcare,Nurse Midwives,160
+2014,Healthcare,Nurse Practitioners,"1,680"
+2014,Healthcare,Audiologists,200
+2014,Healthcare,"Health Diagnosing and Treating Practitioners, All Other","1,710"
+2014,Healthcare,Medical and Clinical Laboratory Technologists,"2,920"
+2014,Healthcare,Medical and Clinical Laboratory Technicians,"3,190"
+2014,Healthcare,Dental Hygienists,"2,970"
+2014,Healthcare,Cardiovascular Technologists and Technicians,930
+2014,Healthcare,Diagnostic Medical Sonographers,760
+2014,Healthcare,Nuclear Medicine Technologists,270
+2014,Healthcare,Radiologic Technologists,"2,290"
+2014,Healthcare,Magnetic Resonance Imaging Technologists,600
+2014,Healthcare,Emergency Medical Technicians and Paramedics,"3,860"
+2014,Healthcare,Dietetic Technicians,700
+2014,Healthcare,Pharmacy Technicians,"6,640"
+2014,Healthcare,Psychiatric Technicians,340
+2014,Healthcare,Respiratory Therapy Technicians,**
+2014,Healthcare,Surgical Technologists,"1,560"
+2014,Healthcare,Veterinary Technologists and Technicians,"1,740"
+2014,Healthcare,Ophthalmic Medical Technicians,670
+2014,Healthcare,Licensed Practical and Licensed Vocational Nurses,"9,940"
+2014,Healthcare,Medical Records and Health Information Technicians,"2,030"
+2014,Healthcare,"Opticians, Dispensing",750
+2014,Healthcare,Orthotists and Prosthetists,130
+2014,Healthcare,Hearing Aid Specialists,**
+2014,Healthcare,"Health Technologists and Technicians, All Other","1,670"
+2014,Healthcare,Occupational Health and Safety Specialists,470
+2014,Healthcare,Occupational Health and Safety Technicians,140
+2014,Healthcare,Athletic Trainers,420
+2014,Healthcare,"Healthcare Practitioners and Technical Workers, All Other",600
+2014,Healthcare,Home Health Aides,"3,780"
+2014,Healthcare,Psychiatric Aides,460
+2014,Healthcare,Nursing Assistants,"17,550"
+2014,Healthcare,Orderlies,430
+2014,Healthcare,Occupational Therapy Assistants,220
+2014,Healthcare,Occupational Therapy Aides,70
+2014,Healthcare,Physical Therapist Assistants,580
+2014,Healthcare,Physical Therapist Aides,530
+2014,Healthcare,Massage Therapists,"1,190"
+2014,Healthcare,Dental Assistants,"6,230"
+2014,Healthcare,Medical Assistants,"11,710"
+2014,Healthcare,Medical Equipment Preparers,740
+2014,Healthcare,Medical Transcriptionists,"1,250"
+2014,Healthcare,Pharmacy Aides,210
+2014,Healthcare,Veterinary Assistants and Laboratory Animal Caretakers,"1,160"
+2014,Healthcare,Phlebotomists,"1,950"
+2014,Healthcare,"Healthcare Support Workers, All Other","1,380"
+2014,Protective Services,First-Line Supervisors of Police and Detectives,"2,030"
+2014,Protective Services,First-Line Supervisors of Fire Fighting and Prevention Workers,940
+2014,Protective Services,"First-Line Supervisors of Protective Service Workers, All Other",840
+2014,Protective Services,Firefighters,"5,630"
+2014,Protective Services,Fire Inspectors and Investigators,240
+2014,Protective Services,Bailiffs,380
+2014,Protective Services,Correctional Officers and Jailers,"4,210"
+2014,Protective Services,Detectives and Criminal Investigators,"1,880"
+2014,Protective Services,Fish and Game Wardens,50
+2014,Protective Services,Police and Sheriff's Patrol Officers,"10,910"
+2014,Protective Services,Animal Control Workers,230
+2014,Protective Services,Private Detectives and Investigators,680
+2014,Protective Services,Security Guards,"18,630"
+2014,Protective Services,Crossing Guards,450
+2014,Protective Services,"Lifeguards, Ski Patrol, and Other Recreational Protective Service Workers","3,110"
+2014,Protective Services,Transportation Security Screeners,"1,130"
+2014,Protective Services,"Protective Service Workers, All Other",480
+2014,Food Services,Chefs and Head Cooks,"2,810"
+2014,Food Services,First-Line Supervisors of Food Preparation and Serving Workers,"14,920"
+2014,Food Services,"Cooks, Fast Food","12,490"
+2014,Food Services,"Cooks, Institution and Cafeteria","10,290"
+2014,Food Services,"Cooks, Restaurant","18,500"
+2014,Food Services,"Cooks, Short Order","2,670"
+2014,Food Services,"Cooks, All Other",270
+2014,Food Services,Food Preparation Workers,"13,110"
+2014,Food Services,Bartenders,"6,500"
+2014,Food Services,"Combined Food Preparation and Serving Workers, Including Fast Food","53,860"
+2014,Food Services,"Counter Attendants, Cafeteria, Food Concession, and Coffee Shop","6,760"
+2014,Food Services,Waiters and Waitresses,"46,260"
+2014,Food Services,"Food Servers, Nonrestaurant","2,400"
+2014,Food Services,Dining Room and Cafeteria Attendants and Bartender Helpers,"5,090"
+2014,Food Services,Dishwashers,"9,330"
+2014,Food Services,"Hosts and Hostesses, Restaurant, Lounge, and Coffee Shop","8,240"
+2014,Food Services,"Food Preparation and Serving Related Workers, All Other",520
+2014,Cleaning and Maintenance,First-Line Supervisors of Housekeeping and Janitorial Workers,"3,200"
+2014,Cleaning and Maintenance,"First-Line Supervisors of Landscaping, Lawn Service, and Groundskeeping Workers","1,750"
+2014,Cleaning and Maintenance,"Janitors and Cleaners, Except Maids and Housekeeping Cleaners","27,660"
+2014,Cleaning and Maintenance,Maids and Housekeeping Cleaners,"13,780"
+2014,Cleaning and Maintenance,Pest Control Workers,"2,060"
+2014,Cleaning and Maintenance,Landscaping and Groundskeeping Workers,"14,070"
+2014,Cleaning and Maintenance,"Pesticide Handlers, Sprayers, and Applicators, Vegetation",210
+2014,Cleaning and Maintenance,Tree Trimmers and Pruners,**
+2014,Cleaning and Maintenance,"Grounds Maintenance Workers, All Other",50
+2014,Personal Care and Services,First-Line Supervisors of Personal Service Workers,"1,950"
+2014,Personal Care and Services,Animal Trainers,120
+2014,Personal Care and Services,Nonfarm Animal Caretakers,"2,800"
+2014,Personal Care and Services,Motion Picture Projectionists,**
+2014,Personal Care and Services,"Ushers, Lobby Attendants, and Ticket Takers","2,090"
+2014,Personal Care and Services,Amusement and Recreation Attendants,"4,050"
+2014,Personal Care and Services,Costume Attendants,**
+2014,Personal Care and Services,"Locker Room, Coatroom, and Dressing Room Attendants",200
+2014,Personal Care and Services,Embalmers,120
+2014,Personal Care and Services,Funeral Attendants,700
+2014,Personal Care and Services,"Morticians, Undertakers, and Funeral Directors",240
+2014,Personal Care and Services,Barbers,340
+2014,Personal Care and Services,"Hairdressers, Hairstylists, and Cosmetologists","5,990"
+2014,Personal Care and Services,"Makeup Artists, Theatrical and Performance",**
+2014,Personal Care and Services,Manicurists and Pedicurists,**
+2014,Personal Care and Services,Shampooers,550
+2014,Personal Care and Services,Skincare Specialists,**
+2014,Personal Care and Services,Baggage Porters and Bellhops,820
+2014,Personal Care and Services,Concierges,680
+2014,Personal Care and Services,Tour Guides and Escorts,220
+2014,Personal Care and Services,Childcare Workers,"15,880"
+2014,Personal Care and Services,Personal Care Aides,"7,240"
+2014,Personal Care and Services,Fitness Trainers and Aerobics Instructors,"2,700"
+2014,Personal Care and Services,Recreation Workers,"5,010"
+2014,Personal Care and Services,Residential Advisors,"1,130"
+2014,Personal Care and Services,"Personal Care and Service Workers, All Other",**
+2014,Sales,First-Line Supervisors of Retail Sales Workers,"21,240"
+2014,Sales,First-Line Supervisors of Non-Retail Sales Workers,"3,860"
+2014,Sales,Cashiers,"52,670"
+2014,Sales,Counter and Rental Clerks,"6,420"
+2014,Sales,Parts Salespersons,"2,750"
+2014,Sales,Retail Salespersons,"82,800"
+2014,Sales,Advertising Sales Agents,"5,710"
+2014,Sales,Insurance Sales Agents,"6,750"
+2014,Sales,"Securities, Commodities, and Financial Services Sales Agents","5,760"
+2014,Sales,Travel Agents,"1,150"
+2014,Sales,"Sales Representatives, Services, All Other","18,970"
+2014,Sales,"Sales Representatives, Wholesale and Manufacturing, Technical and Scientific Products","7,900"
+2014,Sales,"Sales Representatives, Wholesale and Manufacturing, Except Technical and Scientific Products","36,130"
+2014,Sales,Demonstrators and Product Promoters,"1,090"
+2014,Sales,Real Estate Brokers,**
+2014,Sales,Real Estate Sales Agents,"5,900"
+2014,Sales,Sales Engineers,"2,210"
+2014,Sales,Telemarketers,"2,330"
+2014,Sales,"Sales and Related Workers, All Other",810
+2014,Office and Administration,First-Line Supervisors of Office and Administrative Support Workers,"24,080"
+2014,Office and Administration,"Switchboard Operators, Including Answering Service","2,230"
+2014,Office and Administration,"Communications Equipment Operators, All Other",110
+2014,Office and Administration,Bill and Account Collectors,"10,450"
+2014,Office and Administration,Billing and Posting Clerks,"7,630"
+2014,Office and Administration,"Bookkeeping, Accounting, and Auditing Clerks","26,290"
+2014,Office and Administration,Payroll and Timekeeping Clerks,"2,590"
+2014,Office and Administration,Procurement Clerks,860
+2014,Office and Administration,Tellers,"6,030"
+2014,Office and Administration,"Financial Clerks, All Other",620
+2014,Office and Administration,Brokerage Clerks,450
+2014,Office and Administration,Correspondence Clerks,50
+2014,Office and Administration,"Court, Municipal, and License Clerks","1,850"
+2014,Office and Administration,"Credit Authorizers, Checkers, and Clerks",430
+2014,Office and Administration,Customer Service Representatives,"60,390"
+2014,Office and Administration,"Eligibility Interviewers, Government Programs","1,250"
+2014,Office and Administration,File Clerks,"1,880"
+2014,Office and Administration,"Hotel, Motel, and Resort Desk Clerks","3,440"
+2014,Office and Administration,"Interviewers, Except Eligibility and Loan","2,060"
+2014,Office and Administration,"Library Assistants, Clerical",950
+2014,Office and Administration,Loan Interviewers and Clerks,"2,500"
+2014,Office and Administration,New Accounts Clerks,220
+2014,Office and Administration,Order Clerks,"2,710"
+2014,Office and Administration,"Human Resources Assistants, Except Payroll and Timekeeping","2,480"
+2014,Office and Administration,Receptionists and Information Clerks,"19,100"
+2014,Office and Administration,"Information and Record Clerks, All Other","7,190"
+2014,Office and Administration,Cargo and Freight Agents,"1,830"
+2014,Office and Administration,Couriers and Messengers,"1,330"
+2014,Office and Administration,"Police, Fire, and Ambulance Dispatchers","1,190"
+2014,Office and Administration,"Dispatchers, Except Police, Fire, and Ambulance","3,530"
+2014,Office and Administration,"Meter Readers, Utilities","1,190"
+2014,Office and Administration,Postal Service Clerks,"1,020"
+2014,Office and Administration,Postal Service Mail Carriers,"4,850"
+2014,Office and Administration,"Postal Service Mail Sorters, Processors, and Processing Machine Operators","2,550"
+2014,Office and Administration,"Production, Planning, and Expediting Clerks","5,500"
+2014,Office and Administration,"Shipping, Receiving, and Traffic Clerks","13,500"
+2014,Office and Administration,Stock Clerks and Order Fillers,"35,080"
+2014,Office and Administration,"Weighers, Measurers, Checkers, and Samplers, Recordkeeping",990
+2014,Office and Administration,Executive Secretaries and Executive Administrative Assistants,"14,220"
+2014,Office and Administration,Legal Secretaries,"4,070"
+2014,Office and Administration,Medical Secretaries,"4,290"
+2014,Office and Administration,"Secretaries and Administrative Assistants, Except Legal, Medical, and Executive","33,980"
+2014,Office and Administration,Computer Operators,"2,580"
+2014,Office and Administration,Data Entry Keyers,"3,400"
+2014,Office and Administration,Word Processors and Typists,300
+2014,Office and Administration,Desktop Publishers,330
+2014,Office and Administration,Insurance Claims and Policy Processing Clerks,"6,030"
+2014,Office and Administration,"Mail Clerks and Mail Machine Operators, Except Postal Service","2,870"
+2014,Office and Administration,"Office Clerks, General","45,710"
+2014,Office and Administration,"Office Machine Operators, Except Computer","1,770"
+2014,Office and Administration,Proofreaders and Copy Markers,90
+2014,Office and Administration,Statistical Assistants,950
+2014,Office and Administration,"Office and Administrative Support Workers, All Other","1,610"
+2014,"Farming, Fishing, and Forestry","First-Line Supervisors of Farming, Fishing, and Forestry Workers",50
+2014,"Farming, Fishing, and Forestry",Agricultural Inspectors,120
+2014,"Farming, Fishing, and Forestry","Graders and Sorters, Agricultural Products",260
+2014,"Farming, Fishing, and Forestry","Farmworkers and Laborers, Crop, Nursery, and Greenhouse",550
+2014,"Farming, Fishing, and Forestry","Farmworkers, Farm, Ranch, and Aquacultural Animals",**
+2014,"Farming, Fishing, and Forestry",Logging Equipment Operators,90
+2014,Construction,,"75,320"
+2014,Construction,First-Line Supervisors of Construction Trades and Extraction Workers,"8,490"
+2014,Construction,Boilermakers,**
+2014,Construction,Brickmasons and Blockmasons,470
+2014,Construction,Carpenters,"8,550"
+2014,Construction,Carpet Installers,530
+2014,Construction,Tile and Marble Setters,240
+2014,Construction,Cement Masons and Concrete Finishers,"1,430"
+2014,Construction,Construction Laborers,"17,930"
+2014,Construction,"Paving, Surfacing, and Tamping Equipment Operators","1,060"
+2014,Construction,Operating Engineers and Other Construction Equipment Operators,"4,230"
+2014,Construction,Drywall and Ceiling Tile Installers,"1,020"
+2014,Construction,Tapers,90
+2014,Construction,Electricians,"10,440"
+2014,Construction,Glaziers,460
+2014,Construction,"Insulation Workers, Floor, Ceiling, and Wall",240
+2014,Construction,"Insulation Workers, Mechanical",340
+2014,Construction,"Painters, Construction and Maintenance","2,110"
+2014,Construction,Pipelayers,420
+2014,Construction,"Plumbers, Pipefitters, and Steamfitters","4,840"
+2014,Construction,Reinforcing Iron and Rebar Workers,**
+2014,Construction,Roofers,"1,240"
+2014,Construction,Sheet Metal Workers,"1,670"
+2014,Construction,Structural Iron and Steel Workers,700
+2014,Construction,"Helpers--Brickmasons, Blockmasons, Stonemasons, and Tile and Marble Setters",180
+2014,Construction,Helpers--Carpenters,180
+2014,Construction,Helpers--Electricians,"2,050"
+2014,Construction,"Helpers--Painters, Paperhangers, Plasterers, and Stucco Masons",**
+2014,Construction,"Helpers--Pipelayers, Plumbers, Pipefitters, and Steamfitters","1,100"
+2014,Construction,Helpers--Roofers,200
+2014,Construction,Construction and Building Inspectors,"1,310"
+2014,Construction,Elevator Installers and Repairers,520
+2014,Construction,Fence Erectors,280
+2014,Construction,Hazardous Materials Removal Workers,630
+2014,Construction,Highway Maintenance Workers,650
+2014,Construction,Rail-Track Laying and Maintenance Equipment Operators,110
+2014,Construction,Septic Tank Servicers and Sewer Pipe Cleaners,360
+2014,Construction,"Construction and Related Workers, All Other",**
+2014,Construction,"Earth Drillers, Except Oil and Gas",260
+2014,Construction,"Explosives Workers, Ordnance Handling Experts, and Blasters",**
+2014,Construction,Continuous Mining Machine Operators,**
+2014,Construction,Helpers--Extraction Workers,**
+2014,Maintenance and Repair,"First-Line Supervisors of Mechanics, Installers, and Repairers","7,730"
+2014,Maintenance and Repair,"Computer, Automated Teller, and Office Machine Repairers","2,310"
+2014,Maintenance and Repair,"Radio, Cellular, and Tower Equipment Installers and Repairers",120
+2014,Maintenance and Repair,"Telecommunications Equipment Installers and Repairers, Except Line Installers","7,060"
+2014,Maintenance and Repair,Avionics Technicians,800
+2014,Maintenance and Repair,"Electric Motor, Power Tool, and Related Repairers",**
+2014,Maintenance and Repair,"Electrical and Electronics Repairers, Commercial and Industrial Equipment",990
+2014,Maintenance and Repair,"Electrical and Electronics Repairers, Powerhouse, Substation, and Relay",480
+2014,Maintenance and Repair,"Electronic Equipment Installers and Repairers, Motor Vehicles",80
+2014,Maintenance and Repair,Electronic Home Entertainment Equipment Installers and Repairers,460
+2014,Maintenance and Repair,Security and Fire Alarm Systems Installers,"1,130"
+2014,Maintenance and Repair,Aircraft Mechanics and Service Technicians,"5,320"
+2014,Maintenance and Repair,Automotive Body and Related Repairers,"2,370"
+2014,Maintenance and Repair,Automotive Service Technicians and Mechanics,"13,090"
+2014,Maintenance and Repair,Bus and Truck Mechanics and Diesel Engine Specialists,"3,840"
+2014,Maintenance and Repair,Farm Equipment Mechanics and Service Technicians,**
+2014,Maintenance and Repair,"Mobile Heavy Equipment Mechanics, Except Engines","1,260"
+2014,Maintenance and Repair,Rail Car Repairers,220
+2014,Maintenance and Repair,Motorcycle Mechanics,180
+2014,Maintenance and Repair,Outdoor Power Equipment and Other Small Engine Mechanics,360
+2014,Maintenance and Repair,Tire Repairers and Changers,"1,680"
+2014,Maintenance and Repair,Mechanical Door Repairers,320
+2014,Maintenance and Repair,"Control and Valve Installers and Repairers, Except Mechanical Door",360
+2014,Maintenance and Repair,"Heating, Air Conditioning, and Refrigeration Mechanics and Installers","5,020"
+2014,Maintenance and Repair,Home Appliance Repairers,310
+2014,Maintenance and Repair,Industrial Machinery Mechanics,"4,040"
+2014,Maintenance and Repair,"Maintenance Workers, Machinery","1,240"
+2014,Maintenance and Repair,Millwrights,560
+2014,Maintenance and Repair,Electrical Power-Line Installers and Repairers,"3,650"
+2014,Maintenance and Repair,Telecommunications Line Installers and Repairers,"1,270"
+2014,Maintenance and Repair,Camera and Photographic Equipment Repairers,50
+2014,Maintenance and Repair,Medical Equipment Repairers,400
+2014,Maintenance and Repair,"Precision Instrument and Equipment Repairers, All Other",**
+2014,Maintenance and Repair,"Maintenance and Repair Workers, General","24,250"
+2014,Maintenance and Repair,"Coin, Vending, and Amusement Machine Servicers and Repairers",400
+2014,Maintenance and Repair,"Fabric Menders, Except Garment",**
+2014,Maintenance and Repair,Locksmiths and Safe Repairers,**
+2014,Maintenance and Repair,"Helpers--Installation, Maintenance, and Repair Workers","2,270"
+2014,Maintenance and Repair,"Installation, Maintenance, and Repair Workers, All Other","2,180"
+2014,Manufacturing and Production,First-Line Supervisors of Production and Operating Workers,"9,730"
+2014,Manufacturing and Production,"Coil Winders, Tapers, and Finishers",260
+2014,Manufacturing and Production,Electrical and Electronic Equipment Assemblers,"2,220"
+2014,Manufacturing and Production,Electromechanical Equipment Assemblers,**
+2014,Manufacturing and Production,Engine and Other Machine Assemblers,110
+2014,Manufacturing and Production,Structural Metal Fabricators and Fitters,"1,000"
+2014,Manufacturing and Production,Team Assemblers,"21,670"
+2014,Manufacturing and Production,Timing Device Assemblers and Adjusters,50
+2014,Manufacturing and Production,"Assemblers and Fabricators, All Other","1,570"
+2014,Manufacturing and Production,Bakers,"3,210"
+2014,Manufacturing and Production,Butchers and Meat Cutters,"2,380"
+2014,Manufacturing and Production,"Meat, Poultry, and Fish Cutters and Trimmers","2,600"
+2014,Manufacturing and Production,Slaughterers and Meat Packers,630
+2014,Manufacturing and Production,"Food and Tobacco Roasting, Baking, and Drying Machine Operators and Tenders",470
+2014,Manufacturing and Production,Food Batchmakers,"2,150"
+2014,Manufacturing and Production,Food Cooking Machine Operators and Tenders,**
+2014,Manufacturing and Production,"Food Processing Workers, All Other",330
+2014,Manufacturing and Production,"Computer-Controlled Machine Tool Operators, Metal and Plastic",580
+2014,Manufacturing and Production,"Computer Numerically Controlled Machine Tool Programmers, Metal and Plastic",110
+2014,Manufacturing and Production,"Extruding and Drawing Machine Setters, Operators, and Tenders, Metal and Plastic","1,560"
+2014,Manufacturing and Production,"Rolling Machine Setters, Operators, and Tenders, Metal and Plastic",500
+2014,Manufacturing and Production,"Cutting, Punching, and Press Machine Setters, Operators, and Tenders, Metal and Plastic","2,390"
+2014,Manufacturing and Production,"Drilling and Boring Machine Tool Setters, Operators, and Tenders, Metal and Plastic",120
+2014,Manufacturing and Production,"Grinding, Lapping, Polishing, and Buffing Machine Tool Setters, Operators, and Tenders, Metal and Plastic",330
+2014,Manufacturing and Production,"Lathe and Turning Machine Tool Setters, Operators, and Tenders, Metal and Plastic",310
+2014,Manufacturing and Production,"Milling and Planing Machine Setters, Operators, and Tenders, Metal and Plastic",**
+2014,Manufacturing and Production,Machinists,"3,650"
+2014,Manufacturing and Production,Metal-Refining Furnace Operators and Tenders,50
+2014,Manufacturing and Production,Foundry Mold and Coremakers,**
+2014,Manufacturing and Production,"Molding, Coremaking, and Casting Machine Setters, Operators, and Tenders, Metal and Plastic","1,990"
+2014,Manufacturing and Production,"Multiple Machine Tool Setters, Operators, and Tenders, Metal and Plastic",340
+2014,Manufacturing and Production,Tool and Die Makers,670
+2014,Manufacturing and Production,"Welders, Cutters, Solderers, and Brazers","3,400"
+2014,Manufacturing and Production,"Welding, Soldering, and Brazing Machine Setters, Operators, and Tenders",810
+2014,Manufacturing and Production,"Heat Treating Equipment Setters, Operators, and Tenders, Metal and Plastic",80
+2014,Manufacturing and Production,"Plating and Coating Machine Setters, Operators, and Tenders, Metal and Plastic",160
+2014,Manufacturing and Production,Prepress Technicians and Workers,630
+2014,Manufacturing and Production,Printing Press Operators,"3,320"
+2014,Manufacturing and Production,Print Binding and Finishing Workers,900
+2014,Manufacturing and Production,Laundry and Dry-Cleaning Workers,"3,620"
+2014,Manufacturing and Production,"Pressers, Textile, Garment, and Related Materials",950
+2014,Manufacturing and Production,Sewing Machine Operators,"2,500"
+2014,Manufacturing and Production,Shoe and Leather Workers and Repairers,60
+2014,Manufacturing and Production,"Tailors, Dressmakers, and Custom Sewers",310
+2014,Manufacturing and Production,Textile Bleaching and Dyeing Machine Operators and Tenders,490
+2014,Manufacturing and Production,"Textile Cutting Machine Setters, Operators, and Tenders",300
+2014,Manufacturing and Production,"Textile Knitting and Weaving Machine Setters, Operators, and Tenders",900
+2014,Manufacturing and Production,"Textile Winding, Twisting, and Drawing Out Machine Setters, Operators, and Tenders",990
+2014,Manufacturing and Production,"Extruding and Forming Machine Setters, Operators, and Tenders, Synthetic and Glass Fibers",850
+2014,Manufacturing and Production,Upholsterers,270
+2014,Manufacturing and Production,"Textile, Apparel, and Furnishings Workers, All Other",260
+2014,Manufacturing and Production,Cabinetmakers and Bench Carpenters,"1,350"
+2014,Manufacturing and Production,Furniture Finishers,100
+2014,Manufacturing and Production,"Sawing Machine Setters, Operators, and Tenders, Wood",640
+2014,Manufacturing and Production,"Woodworking Machine Setters, Operators, and Tenders, Except Sawing","1,050"
+2014,Manufacturing and Production,Power Distributors and Dispatchers,190
+2014,Manufacturing and Production,Power Plant Operators,620
+2014,Manufacturing and Production,Stationary Engineers and Boiler Operators,170
+2014,Manufacturing and Production,Water and Wastewater Treatment Plant and System Operators,"1,050"
+2014,Manufacturing and Production,Chemical Plant and System Operators,450
+2014,Manufacturing and Production,Gas Plant Operators,70
+2014,Manufacturing and Production,"Petroleum Pump System Operators, Refinery Operators, and Gaugers",150
+2014,Manufacturing and Production,Chemical Equipment Operators and Tenders,640
+2014,Manufacturing and Production,"Separating, Filtering, Clarifying, Precipitating, and Still Machine Setters, Operators, and Tenders",800
+2014,Manufacturing and Production,"Crushing, Grinding, and Polishing Machine Setters, Operators, and Tenders",360
+2014,Manufacturing and Production,"Grinding and Polishing Workers, Hand",390
+2014,Manufacturing and Production,"Mixing and Blending Machine Setters, Operators, and Tenders","2,040"
+2014,Manufacturing and Production,"Cutters and Trimmers, Hand",190
+2014,Manufacturing and Production,"Cutting and Slicing Machine Setters, Operators, and Tenders","1,170"
+2014,Manufacturing and Production,"Extruding, Forming, Pressing, and Compacting Machine Setters, Operators, and Tenders","1,020"
+2014,Manufacturing and Production,"Furnace, Kiln, Oven, Drier, and Kettle Operators and Tenders",140
+2014,Manufacturing and Production,"Inspectors, Testers, Sorters, Samplers, and Weighers","6,610"
+2014,Manufacturing and Production,Jewelers and Precious Stone and Metal Workers,270
+2014,Manufacturing and Production,Dental Laboratory Technicians,790
+2014,Manufacturing and Production,Medical Appliance Technicians,210
+2014,Manufacturing and Production,Ophthalmic Laboratory Technicians,970
+2014,Manufacturing and Production,Packaging and Filling Machine Operators and Tenders,"8,910"
+2014,Manufacturing and Production,"Coating, Painting, and Spraying Machine Setters, Operators, and Tenders",970
+2014,Manufacturing and Production,"Painters, Transportation Equipment",610
+2014,Manufacturing and Production,"Painting, Coating, and Decorating Workers",230
+2014,Manufacturing and Production,Photographic Process Workers and Processing Machine Operators,470
+2014,Manufacturing and Production,Adhesive Bonding Machine Operators and Tenders,510
+2014,Manufacturing and Production,"Cleaning, Washing, and Metal Pickling Equipment Operators and Tenders",340
+2014,Manufacturing and Production,Etchers and Engravers,190
+2014,Manufacturing and Production,"Molders, Shapers, and Casters, Except Metal and Plastic",430
+2014,Manufacturing and Production,"Paper Goods Machine Setters, Operators, and Tenders",930
+2014,Manufacturing and Production,Tire Builders,870
+2014,Manufacturing and Production,Helpers--Production Workers,"6,200"
+2014,Manufacturing and Production,"Production Workers, All Other","3,740"
+2014,Transportation and Moving,Aircraft Cargo Handling Supervisors,170
+2014,Transportation and Moving,"First-Line Supervisors of Helpers, Laborers, and Material Movers, Hand","4,390"
+2014,Transportation and Moving,First-Line Supervisors of Transportation and Material-Moving Machine and Vehicle Operators,"3,850"
+2014,Transportation and Moving,"Airline Pilots, Copilots, and Flight Engineers","7,620"
+2014,Transportation and Moving,Commercial Pilots,850
+2014,Transportation and Moving,Air Traffic Controllers,820
+2014,Transportation and Moving,Flight Attendants,"8,800"
+2014,Transportation and Moving,"Ambulance Drivers and Attendants, Except Emergency Medical Technicians",290
+2014,Transportation and Moving,"Bus Drivers, Transit and Intercity","2,400"
+2014,Transportation and Moving,"Bus Drivers, School or Special Client","9,680"
+2014,Transportation and Moving,Driver/Sales Workers,"8,390"
+2014,Transportation and Moving,Heavy and Tractor-Trailer Truck Drivers,"29,820"
+2014,Transportation and Moving,Light Truck or Delivery Services Drivers,"15,340"
+2014,Transportation and Moving,Taxi Drivers and Chauffeurs,"2,410"
+2014,Transportation and Moving,Parking Lot Attendants,"2,330"
+2014,Transportation and Moving,Automotive and Watercraft Service Attendants,"1,270"
+2014,Transportation and Moving,Traffic Technicians,90
+2014,Transportation and Moving,Transportation Inspectors,"1,110"
+2014,Transportation and Moving,"Transportation Attendants, Except Flight Attendants",**
+2014,Transportation and Moving,"Transportation Workers, All Other",**
+2014,Transportation and Moving,Conveyor Operators and Tenders,550
+2014,Transportation and Moving,Crane and Tower Operators,430
+2014,Transportation and Moving,Excavating and Loading Machine and Dragline Operators,410
+2014,Transportation and Moving,Industrial Truck and Tractor Operators,"14,340"
+2014,Transportation and Moving,Cleaners of Vehicles and Equipment,"4,390"
+2014,Transportation and Moving,"Laborers and Freight, Stock, and Material Movers, Hand","61,010"
+2014,Transportation and Moving,Machine Feeders and Offbearers,"1,830"
+2014,Transportation and Moving,"Packers and Packagers, Hand","17,810"
+2014,Transportation and Moving,Refuse and Recyclable Material Collectors,"1,690"
+2014,Transportation and Moving,"Tank Car, Truck, and Ship Loaders",**
+2014,Transportation and Moving,"Material Moving Workers, All Other",280

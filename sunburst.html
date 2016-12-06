@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+
+circle,
+path {
+  cursor: pointer;
+}
+
+circle {
+  fill: none;
+  pointer-events: all;
+}
+
+#tooltip { background-color: white;
+        padding: 3px 5px;
+        border: 1px solid black;
+        text-align: center;}
+
+html {
+  font-family: sans-serif;
+  
+}
+h1 {
+  text-align: center;
+}
+
+input[type="button"] {
+  display: inline-block;
+    margin: 0 1%;
+    width: 20%;
+    font-size: 30em;
+}
+#option {
+  width:500px;
+  margin:auto;
+}
+
+
+</style>
+<body>
+<h1> Atlanta Demographics </h1>
+<div id="sunburst" > </div>
+<div id="bubbles" >
+  <div id="option">
+    Group by: 
+    <input id="GroupByNone"
+            name="updateButton" 
+           type="button" 
+           value="No Group" />
+
+    <input id="GroupByAge"  
+            name="updateButton" 
+          type="button" 
+           value="Age" />
+
+    <input id="GroupByRace"
+           name="updateButton" 
+           type="button" 
+           value="Race"  />
+  </div>
+ </div>
+<h1> Atlanta Occupations </h1>
+</body>
+<script src="//d3js.org/d3.v3.min.js"></script>
+<script src="sunburst.js"></script>
+<script src="bubbles.js"></script>
+
+<script>
+
+ function convertCSV(csv) {
+    var tree = {"name" : "Occupations", children: []}
+
+    for (var i =0; i < csv.length; i ++) {
+      var obj = csv[i]
+      var categoryName = obj["Occupation Category"];
+
+      var index = -1
+
+      for (var j =0; j < tree.children.length; j ++) {
+        if ( tree.children[j].name  == categoryName)
+          index = j;
+      }
+
+      // if it doesn' exist, add new node object
+      if ( index == -1 ) {
+        tree.children.push( {"name": categoryName, children : [] } )
+        index = tree.children.length - 1;
+      }  
+      
+      // add the child child 
+      var specificName = obj["Occupation"]
+      var size = obj["Employment"]
+      tree.children[index].children.push( { "name" : specificName, "size" : size})
+
+    }
+
+    return tree;
+
+  }
+
+  d3.csv("data/occupations.csv", function(error, csv) {
+    addSunburst(convertCSV(csv))
+  });
+
+  d3.csv("data/demographics.csv", function(error, csv) {
+    addBubbles(csv)
+  });
+
+
+</script>

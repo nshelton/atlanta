@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)http://mapping-prototype.azurewebsites.net/mapbox-gl.html -->
+<html><script>(function main() {
+    // Create enabled event
+    function fireEnabledEvent() {
+        // If gli exists, then we are already present and shouldn't do anything
+        if (!window.gli) {
+            setTimeout(function () {
+                var enabledEvent = document.createEvent("Event");
+                enabledEvent.initEvent("WebGLEnabledEvent", true, true);
+                document.dispatchEvent(enabledEvent);
+            }, 0);
+        } else {
+            //console.log("WebGL Inspector already embedded on the page - disabling extension");
+        }
+    };
+
+    // Grab the path root from the extension
+    document.addEventListener("WebGLInspectorReadyEvent", function (e) {
+        var pathElement = document.getElementById("__webglpathroot");
+        if (window["gliloader"]) {
+            gliloader.pathRoot = pathElement.innerText;
+        } else {
+            // TODO: more?
+            window.gliCssUrl = pathElement.innerText + "gli.all.css";
+        }
+    }, false);
+
+    // Rewrite getContext to snoop for webgl
+    var originalGetContext = HTMLCanvasElement.prototype.getContext;
+    if (!HTMLCanvasElement.prototype.getContextRaw) {
+        HTMLCanvasElement.prototype.getContextRaw = originalGetContext;
+    }
+    HTMLCanvasElement.prototype.getContext = function () {
+        var ignoreCanvas = this.internalInspectorSurface;
+        if (ignoreCanvas) {
+            return originalGetContext.apply(this, arguments);
+        }
+
+        var result = originalGetContext.apply(this, arguments);
+        if (result == null) {
+            return null;
+        }
+
+        var contextNames = ["moz-webgl", "webkit-3d", "experimental-webgl", "webgl", "3d"];
+        var requestingWebGL = contextNames.indexOf(arguments[0]) != -1;
+        if (requestingWebGL) {
+            // Page is requesting a WebGL context!
+            fireEnabledEvent(this);
+
+            // If we are injected, inspect this context
+            if (window.gli) {
+                if (gli.host.inspectContext) {
+                    // TODO: pull options from extension
+                    result = gli.host.inspectContext(this, result);
+                    // NOTE: execute in a timeout so that if the dom is not yet
+                    // loaded this won't error out.
+                    window.setTimeout(function() {
+                        var hostUI = new gli.host.HostUI(result);
+                        result.hostUI = hostUI; // just so we can access it later for debugging
+                    }, 0);
+                }
+            }
+        }
+
+        return result;
+    };
+})();</script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+
+  <link href="./mapbox-gl_files/icon" rel="stylesheet">
+  <script type="text/javascript" src="./mapbox-gl_files/jquery-2.1.1.min.js"></script>
+
+  <script type="text/javascript" src="./mapbox-gl_files/customTHREE.js"></script>
+
+
+  <script src="./mapbox-gl_files/mapbox-gl.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r73/three.js"></script>
+
+  <link href="./mapbox-gl_files/mapbox-gl.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="./mapbox-gl_files/materialize.min.css">
+  <script src="./mapbox-gl_files/materialize.min.js"></script>
+
+  <style>
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  #map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .fly {
+    display: block;
+    position: relative;
+    margin: 0px auto;
+    width: 20%;
+    background: white;
+    padding: 0 10px;
+  }
+  
+  .fly > button,
+  .fly > input {
+    height: 40px;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    font-size: 12px;
+    text-align: center;
+    color: #fff;
+    background: #ee8a65;
+  }
+  
+  .btn-container {
+    /*top: 90%;*/
+    /*clear: both;*/
+    position: fixed;
+    /*height: 3em;*/
+    /*margin-top: 30em;*/
+    /*padding: 10px;*/
+    /*border: red solid 1px;*/
+    z-index: 10;
+    bottom: 100px;
+  }
+  
+  .btn {
+    background: white;
+    margin: 0 8px;
+    color: black;
+    height: 40px;
+  }
+  
+  .quote-container {
+    background: white;
+    color: balck;
+    height: 60px;
+    /*width: 100%;*/
+    z-index: 20;
+    position: fixed;
+    padding: 10px;
+    bottom: 160px;
+  }
+  
+  #quote {
+    margin: 0 auto;
+  }
+  </style>
+<style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+</style></head>
+
+<body>
+
+  <div id="map" class="mapboxgl-map"><div class="mapboxgl-canvas-container mapboxgl-interactive"><canvas class="mapboxgl-canvas" tabindex="0" style="position: absolute; width: 1477px; height: 1038px;" width="2954" height="2076"></canvas></div><div class="mapboxgl-control-container"><div class="mapboxgl-ctrl-top-left"></div><div class="mapboxgl-ctrl-top-right"><div class="mapboxgl-ctrl-group mapboxgl-ctrl"><button class="mapboxgl-ctrl-icon mapboxgl-ctrl-zoom-in"></button><button class="mapboxgl-ctrl-icon mapboxgl-ctrl-zoom-out"></button><button class="mapboxgl-ctrl-compass"><canvas class="mapboxgl-ctrl-compass-canvas" width="52" height="52" style="width: 30px; height: 30px;"></canvas></button></div></div><div class="mapboxgl-ctrl-bottom-left"></div><div class="mapboxgl-ctrl-bottom-right"><div class="mapboxgl-ctrl-attrib mapboxgl-ctrl"><a href="https://www.mapbox.com/about/maps/" target="_blank">© Mapbox</a> <a href="http://www.openstreetmap.org/about/" target="_blank">© OpenStreetMap</a> <a class="mapbox-improve-map" href="https://www.mapbox.com/map-feedback/#/-84.37/33.75999999999999/14" target="_blank">Improve this map</a></div></div></div></div>
+  <div class="fly">
+    <p>Layers: </p>`
+    <form action="http://mapping-prototype.azurewebsites.net/mapbox-gl.html#">
+      <p>
+        <input type="checkbox" id="fire-chk" checked="checked">
+        <label for="fire-chk">1917 Fire</label>
+      </p>
+
+      <p>
+        <input type="checkbox" id="three-chk" checked="checked">
+        <label for="three-chk">THREE.js layer</label>
+      </p>
+    </form>
+    <!-- <button onclick="fly();">Fly</button>
+    <button onclick="flyback();">Reset</button>
+    <button onclick="addLayer();">Add Fire Layer</button>
+    <button onclick="removeLayer();">Remove Fire Layer</button> -->
+
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="quote-container valign-wrapper col s10">
+        <p id="quote">The Great Atlanta Fire occured on May 21, 1917 in the Old Fourth Ward.</p>
+      </div>
+
+      <div class="btn-container col s9">
+        <a class="waves-effect waves-light btn" onclick="scene( scene1 );">SCENE 1</a>
+        <a class="waves-effect waves-light btn" onclick="scene( scene2 );">SCENE 2</a>
+        <a class="waves-effect waves-light btn" onclick="scene( scene3 );">SCENE 3</a>
+        <a class="waves-effect waves-light btn" onclick="scene( scene4 );">SCENE 4</a>
+        <a class="waves-effect waves-light btn" onclick="scene( scene5 );">SCENE 5</a>
+        <a class="waves-effect waves-light btn" onclick="scene( scene6 );">SCENE 6</a>
+      </div>
+    </div>
+  </div>
+  <script>
+  mapboxgl.accessToken =
+    'pk.eyJ1IjoidGVycmFpbmNvZ25pdGEiLCJhIjoiS3FCYi1kUSJ9.tF9nykTfQrO-e9BsYbJrRQ';
+    // 'pk.eyJ1IjoiYnJpYW4tY2hpbGRyZXNzIiwiYSI6ImNpZXR2dTh2cDBidzByeG0ydm11dW4wc3cifQ.-HBZXoCUEgzvIuoVU9DnKg';
+  var map = new mapboxgl.Map({
+    container: 'map', // container id
+    style: 'mapbox://styles/terraincognita/cih3xl6c5001790m3fku5blh9', //stylesheet location
+    center: [-84.39, 33.7550], // starting position
+    zoom: 10, // starting zoom
+    bearing: 20,
+    pitch: 45
+  });
+  map.addControl(new mapboxgl.Navigation());
+
+
+  map.on('style.load', function() {
+    map.addSource("route", {
+      "type": "geojson",
+      "data": {
+        "type": "Feature",
+        "properties": {},
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [[-84.377173, 33.750076],
+            [-84.377464, 33.749947],
+            [-84.377779, 33.749985],
+            [-84.37796, 33.750329],
+            [-84.377874, 33.75268],
+            [-84.377837, 33.756382],
+            [-84.377825, 33.758984],
+            [-84.37777, 33.761636],
+            [-84.377694, 33.763895],
+            [-84.377587, 33.766072],
+            [-84.377535, 33.767898],
+            [-84.376941, 33.768216],
+            [-84.376623, 33.768535],
+            [-84.376228, 33.768933],
+            [-84.37602, 33.769369],
+            [-84.376071, 33.770055],
+            [-84.37616, 33.770592],
+            [-84.375988, 33.771395],
+            [-84.375605, 33.771971],
+            [-84.375071, 33.772246],
+            [-84.374456, 33.772545],
+            [-84.372756, 33.773384],
+            [-84.372609, 33.774826],
+            [-84.372242, 33.775381],
+            [-84.37175, 33.775924],
+            [-84.371432, 33.776489],
+            [-84.371266, 33.776828],
+            [-84.370894, 33.776894],
+            [-84.370608, 33.776775],
+            [-84.370597, 33.776363],
+            [-84.370843, 33.77596],
+            [-84.371051, 33.775313],
+            [-84.371022, 33.774693],
+            [-84.370971, 33.773673],
+            [-84.369977, 33.773763],
+            [-84.369558, 33.773701],
+            [-84.369224, 33.773574],
+            [-84.369442, 33.772878],
+            [-84.369559, 33.771957],
+            [-84.369391, 33.771126],
+            [-84.368816, 33.770409],
+            [-84.368418, 33.76993],
+            [-84.368158, 33.76944],
+            [-84.367902, 33.769081],
+            [-84.368019, 33.768711],
+            [-84.36854, 33.768511],
+            [-84.369313, 33.768331],
+            [-84.36979, 33.768093],
+            [-84.369959, 33.766849],
+            [-84.369923, 33.765998],
+            [-84.369193, 33.765505],
+            [-84.368944, 33.764962],
+            [-84.368894, 33.76412],
+            [-84.369117, 33.763413],
+            [-84.36919, 33.762644],
+            [-84.36929, 33.761875],
+            [-84.369525, 33.76152],
+            [-84.369802, 33.761372],
+            [-84.370135, 33.761355],
+            [-84.370857, 33.761422],
+            [-84.371742, 33.761355],
+            [-84.372011, 33.761242],
+            [-84.37208, 33.761038],
+            [-84.372064, 33.759401],
+            [-84.372074, 33.758464],
+            [-84.372114, 33.757018],
+            [-84.372174, 33.754723],
+            [-84.372373, 33.754036],
+            [-84.372822, 33.753414],
+            [-84.373617, 33.752304],
+            [-84.374861, 33.751315],
+            [-84.376104, 33.750589],
+            [-84.377173, 33.750076]
+          ]]
+        }
+      }
+    });
+    addLayer();
+  });
+
+  function addLayer() {
+    map.addLayer({
+      "id": "route",
+      "type": "fill",
+      "source": "route",
+      "layout": {
+        "line-join": "round",
+        "line-cap": "round",
+        "zIndex": 2,
+      },
+      "paint": {
+        "fill-color": "#F44336",
+        "fill-opacity": 0.4,
+        "fill-outline-color": "red"
+      }
+    });
+  }
+
+  function removeLayer() {
+    map.removeLayer("route");
+  }
+
+
+  var reset = {
+    center: [-84.39, 33.7550], // starting position
+    zoom: 10, // starting zoom
+    bearing: 20
+  };
+  var scene1 = {
+    // center: [-84.38, 33.7550],
+    center: [-84.37, 33.760],
+    zoom: 13,
+    speed: 0.4,
+    bearing: -25,
+    comment: "The Great Atlanta Fire occured on May 21, 1917 in the Old Fourth Ward."
+  };
+  var scene2 = {
+    center: [-84.3765, 33.7505],
+    zoom: 16.5,
+    speed: 0.4,
+    bearing: -25,
+    comment: "It is unclear just how the fire started, but it was fueled by hot temperatures and strong winds which propelled the fire."
+  };
+  var scene3 = {
+    center: [-84.374, 33.754],
+    zoom: 17,
+    speed: 0.4,
+    bearing: -20,
+    comment: "The fire spread quickly up to Edgewood Avenue and from there throughout the main residential areas of Sweet Auburn."
+  };
+  var scene4 = {
+    center: [-84.372, 33.7642],
+    zoom: 16,
+    speed: 0.4,
+    bearing: -20,
+    comment: "When the fire reached Highland, it raced both east and west through many fine homes."
+  };
+  var scene5 = {
+    center: [-84.3712, 33.772],
+    zoom: 15.5,
+    speed: 0.9,
+    bearing: -70,
+    comment: "It finally stopped at 10 PM, more than a mile north of where it began. Nearly 2000 buildings were destroyed."
+  };
+  var scene6 = {
+    center: [-84.37, 33.760],
+    zoom: 13,
+    speed: 0.4,
+    bearing: -25,
+    comment: "The next U.S. fire of more significance wouldn't occur for more than 70 years: The Oakland Hills firestorm of 1991."
+  };
+
+  function scene(scene) {
+    // map.flyTo(reset);
+    flyback();
+    map.flyTo(scene);
+    document.getElementById("quote").innerHTML = scene.comment;
+  }
+
+  function fly() {
+    map.flyTo({
+      center: [-84.38, 33.7550],
+      zoom: 13,
+      speed: 0.1,
+      bearing: -45
+    });
+  }
+
+  function flyback() {
+    map.flyTo({
+      center: [-84.38, 33.7550],
+      zoom: 10
+    });
+  }
+
+
+  $('#fire-chk').change(function() {
+    var check = $(this).attr('checked');
+    console.log(check);
+    if ($(this).is(":checked")) {
+      addLayer();
+    } else {
+      removeLayer();
+    }
+  });
+
+
+    $('#three-chk').change(function() {
+    var check = $(this).attr('checked');
+    console.log(check);
+    if ($(this).is(":checked")) {
+      init(map);
+    } else {
+    }
+  });
+
+  </script>
+
+
+<div class="hiddendiv common"></div></body></html>
